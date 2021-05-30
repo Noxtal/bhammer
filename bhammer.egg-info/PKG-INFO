@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: bhammer
+Version: 1.0
+Summary: Python tool to create a ASCII art banner for a command line tool.
+Home-page: https://github.com/noxtal/bhammer
+Author: Noxtal
+Author-email: contact.noxtal@gmail.com
+License: GNU
+Description: # bhammer
+        
+        This is a Python tool to create a ASCII art banner for a command line tool.
+        
+        ## Usage
+        ### Install
+        
+        ``` sh
+        $ pip install bhammer
+        ```
+        ### How to use
+        Run the program and input the necessary information:
+        ```sh
+        python -m bhammer
+        ```
+        
+        For more things I did, see my [website](https://www.noxtal.com).
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: GNU License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
