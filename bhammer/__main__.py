@@ -2,7 +2,7 @@
 
 from art import *
 
-if __name__ == '__main__':
+def main():
 	art = None
 
 	artfn = input("ASCII art to include (text format, - to skip) ")
@@ -53,3 +53,6 @@ if __name__ == '__main__':
 		print(line)
 
 	print(extra)
+
+if __name__ == '__main__':
+	exit(main() or 0)

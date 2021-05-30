@@ -35,7 +35,7 @@ class UploadCommand(setuptools.Command):
         os.system('{0} setup.py sdist bdist_wheel'.format(sys.executable))
 
         self.status('Uploading the package to PyPi via Twine...')
-        os.system('twine upload dist/*')
+        os.system('twine upload dist/* --verbose')
 
         self.status('Pushing git tags...')
         os.system('git tag v{0}'.format(version))
@@ -47,30 +47,34 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 
-    setuptools.setup(
-       name='bhammer',  
-       version=version,
-       license='GNU',
-       scripts=['bhammer'] ,
-       author="Noxtal",
-       author_email="contact.noxtal@gmail.com",
-       python_requires=">=3.6.0",
-       description="Python tool to create a ASCII art banner for a command line tool.",
-       long_description=long_description,
-       long_description_content_type="text/markdown",
-       url="https://github.com/noxtal/bhammer",
-       packages=setuptools.find_packages(),
-       install_requires=["art"],
-       classifiers=[
-       "Programming Language :: Python :: 3.6",
-       "Programming Language :: Python :: 3.7",
-       "Programming Language :: Python :: 3.8",
-       "License :: OSI Approved :: GNU License",
-       "Operating System :: OS Independent",
-       'Topic :: Software Development :: Build Tools',
-       'Intended Audience :: Developers',
-       ],
-       cmdclass={
-        'upload': UploadCommand,
-    }
-    )
+setuptools.setup(
+ name='bhammer',  
+ version=version,
+ license='GNU',
+ scripts=['bhammer'] ,
+ author="Noxtal",
+ author_email="contact.noxtal@gmail.com",
+ python_requires=">=3.6.0",
+ description="Python tool to create an ASCII art banner for a command line tool.",
+ long_description=long_description,
+ long_description_content_type="text/markdown",
+ url="https://github.com/noxtal/bhammer",
+ packages=setuptools.find_packages(),
+ install_requires=["art"],
+ entry_points={
+ 'console_scripts': [
+ 'stegcracker=stegcracker.__main__:main',
+ ]
+ },
+ classifiers=[
+ "Programming Language :: Python :: 3.6",
+ "Programming Language :: Python :: 3.7",
+ "Programming Language :: Python :: 3.8",
+ "Operating System :: OS Independent",
+ 'Topic :: Software Development :: Build Tools',
+ 'Intended Audience :: Developers',
+ ],
+ cmdclass={
+ 'upload': UploadCommand,
+ }
+ )

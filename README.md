@@ -1,6 +1,6 @@
 # bhammer
 
-This is a Python tool to create a ASCII art banner for a command line tool.
+This is a Python tool to create an ASCII art banner for a command line tool.
 
 ## Usage
 ### Install

@@ -1,0 +1,3 @@
+[console_scripts]
+stegcracker = stegcracker.__main__:main
+
