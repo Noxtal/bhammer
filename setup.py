@@ -51,7 +51,6 @@ setuptools.setup(
  name='bhammer',  
  version=version,
  license='GNU',
- scripts=['bhammer'] ,
  author="Noxtal",
  author_email="contact.noxtal@gmail.com",
  python_requires=">=3.6.0",
@@ -63,7 +62,7 @@ setuptools.setup(
  install_requires=["art"],
  entry_points={
  'console_scripts': [
- 'stegcracker=stegcracker.__main__:main',
+ 'bhammer=bhammer.__main__:main',
  ]
  },
  classifiers=[
