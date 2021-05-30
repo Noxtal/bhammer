@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: bhammer
-Version: 1.0
+Version: 1.1
 Summary: Python tool to create an ASCII art banner for a command line tool.
 Home-page: https://github.com/noxtal/bhammer
 Author: Noxtal

@@ -5,7 +5,7 @@ from shutil import rmtree
 
 here = os.path.abspath(os.path.dirname(__file__))
 
-version = "1.0"
+version = "1.1"
 
 class UploadCommand(setuptools.Command):
     """Support setup.py upload."""
